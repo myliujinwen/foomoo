@@ -1,0 +1,2 @@
+把以上三个文件放到jmeter的bin目录下
+用jmeter打开foomoo.jmx运行即可

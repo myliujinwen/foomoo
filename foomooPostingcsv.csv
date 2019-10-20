@@ -1,0 +1,16 @@
+ApiName,CaseId,Desc,title,slug,body,id,token,isStatus,validatorLocation,ValidatorMethod,ValidatorsInfo
+发帖,1,合法的参数,666666,666,1234567890,0,csrf_token,1,responseMessage,contains,Your post is now live
+发帖,2,title不能为空,,667,1234567891,0,csrf_token,1,responseMessage,contains,This field is required
+发帖,3,title可重复,666666,668,1234567892,0,csrf_token,1,responseMessage,contains,Your post is now live
+发帖,4,title不能发送特殊字符,1,669,1234567893,0,csrf_token,1,responseMessage,contains,The title has a forbidden symbols
+发帖,5,slug可为空,ERTETisnull,,1234567894,0,csrf_token,1,responseMessage,contains,Your post is now live
+发帖,6,slug为空时可以重复,whenisnullcan,,1234567895,0,csrf_token,1,responseMessage,contains,Your post is now live
+发帖,7,slug不为空时不能重复,666670,666,1234567896,0,csrf_token,0,responseMessage-reponseCode,contains,NoneType' object has no attribute 'slug'-500
+发帖,8,body不能为空,666671,wrw13,,0,csrf_token,1,responseMessage,contains,This field is required
+发帖,9,body可以为重复,666672,wrw14,1234567890,0,csrf_token,1,responseMessage,contains,Your post is now live
+发帖,10,body不能为9个字符,body9,wrw15,abcdedghi,0,csrf_token,1,responseMessage,contains,Field must be between 10 and 140 characters long
+发帖,11,body不能为141个字符,body141,wrw16,fsdfsaf34214214142342142342423dgdsgdfgdfgdfgdfgdfgdfgdsfgdsfgdfgdfgdgdfgdfgdfgdsfgdsfgdfgdsfgdsfgdsfgdfgdsfgdfgdfgdfgdfgdgdfgdgdfgdfy34545353,0,csrf_token,1,responseMessage,contains,Field must be between 10 and 140 characters long
+发帖,12,body可以为10个字符,body10,wrw17,abcdedghij,0,csrf_token,1,responseMessage,contains,Your post is now live
+发帖,13,body可以为140个字符,body140,wrw18,fsdfsaf34214214142342142342423dgdsgdfgdfgdfgdfgdfgdfgdsfgdsfgdfgdfgdgdfgdfgdfgdsfgdsfgdfgdsfgdsfgdsfgdfgdsfgdfgdfgdfgdfgdgdfgdgdfgdfy3454535,0,csrf_token,1,responseMessage,contains,Your post is now live
+发帖,14,id可以为空,isNull1,wrw19,ertewtewtRYREYERY,0,csrf_token,1,responseMessage,contains,Your post is now live
+发帖,15,id为空时slug可以重复,idisnullcanrepeat2,wrw20,ertewtewRTYERYREYRE,,csrf_token,1,responseMessage,contains,Your post is now live

@@ -1,0 +1,9 @@
+ApiName,CaseId,Desc,token,email,password,validatorLocation,ValidatorMethod,ValidatorsInfo
+登陆,1,空email,正确,,123456,text,not,Logged in successfully
+登陆,2,空密码,正确,chengzhour@163.com,,text,not,Logged in successfully
+登陆,3,空csrf_token,none,chengzhour@163.com,123456,text,not,Logged in successfully
+登陆,4,不合法的email,正确,chengzhangour,123456,text,contains,Invalid email address
+登陆,5,未注册的email,正确,hello@163.com,123456,text,not,Logged in successfully
+登陆,6,错误的密码,正确,chengzhangour@163.com,999999,text,contains,Wrong credentials
+登陆,7,不存在的csrf_token,tyutrye46456,chengzhangour@163.com,123456,text,not,Logged in successfully
+发帖,8,合法的参数,正确,chengzhangour@163.com,123456,text,contains,Logged in successfully
