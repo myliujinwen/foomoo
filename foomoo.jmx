@@ -1,0 +1,1163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.1.1 r1855137">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Login_Posting_Logout" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+          <stringProp name="HTTPSampler.port">5000</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+          <stringProp name="HTTPSampler.port">5000</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+          <collectionProp name="CookieManager.cookies">
+            <elementProp name="_ga" elementType="Cookie" testname="_ga">
+              <stringProp name="Cookie.value">GA1.1.1286435983.1534223530</stringProp>
+              <stringProp name="Cookie.domain"></stringProp>
+              <stringProp name="Cookie.path"></stringProp>
+              <boolProp name="Cookie.secure">true</boolProp>
+              <longProp name="Cookie.expires">0</longProp>
+              <boolProp name="Cookie.path_specified">true</boolProp>
+              <boolProp name="Cookie.domain_specified">true</boolProp>
+            </elementProp>
+          </collectionProp>
+          <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+        </CookieManager>
+        <hashTree/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="LoginCases" enabled="true"/>
+        <hashTree>
+          <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+            <collectionProp name="CookieManager.cookies">
+              <elementProp name="_ga" elementType="Cookie" testname="_ga">
+                <stringProp name="Cookie.value">GA1.1.1286435983.1534223530</stringProp>
+                <stringProp name="Cookie.domain"></stringProp>
+                <stringProp name="Cookie.path"></stringProp>
+                <boolProp name="Cookie.secure">true</boolProp>
+                <longProp name="Cookie.expires">0</longProp>
+                <boolProp name="Cookie.path_specified">true</boolProp>
+                <boolProp name="Cookie.domain_specified">true</boolProp>
+              </elementProp>
+            </collectionProp>
+            <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+          </CookieManager>
+          <hashTree/>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Logining_Loop Controller" enabled="true">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">8</stringProp>
+          </LoopController>
+          <hashTree>
+            <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+              <stringProp name="filename">foomooLogincsv.csv</stringProp>
+              <stringProp name="fileEncoding">UTF-8</stringProp>
+              <stringProp name="variableNames"></stringProp>
+              <boolProp name="ignoreFirstLine">false</boolProp>
+              <stringProp name="delimiter"></stringProp>
+              <boolProp name="quotedData">true</boolProp>
+              <boolProp name="recycle">true</boolProp>
+              <boolProp name="stopThread">false</boolProp>
+              <stringProp name="shareMode">shareMode.all</stringProp>
+            </CSVDataSet>
+            <hashTree/>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Login_ready_  ${Desc}" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments"/>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+              <stringProp name="HTTPSampler.port">5000</stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/login</stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">csrf_token</stringProp>
+                <stringProp name="RegexExtractor.regex">name=&quot;csrf_token&quot; type=&quot;hidden&quot; value=&quot;(.*)&quot;&gt;</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.default">cuowu</stringProp>
+                <stringProp name="RegexExtractor.match_number"></stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="true">
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="script">
+String mytoken=&quot;&quot;;
+if(&quot;none&quot;.equals(&quot;${token}&quot;)){
+	mytoken=&quot;&quot;;
+}else if(&quot;正确&quot;.equals(&quot;${token}&quot;)){
+	mytoken=&quot;${csrf_token}&quot;;
+}else{
+	mytoken=&quot;${token}&quot;;
+}
+vars.put(&quot;mytoken&quot;,mytoken);</stringProp>
+              </BeanShellPostProcessor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Login_case：  ${CaseId}、${Desc}" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="csrf_token" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${mytoken}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">csrf_token</stringProp>
+                  </elementProp>
+                  <elementProp name="email" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${email}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">email</stringProp>
+                  </elementProp>
+                  <elementProp name="password" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${password}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">password</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+              <stringProp name="HTTPSampler.port">5000</stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/login</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell Assertion" enabled="true">
+                <stringProp name="BeanShellAssertion.query">import org.apache.jmeter.util.JMeterUtils;
+import org.apache.jmeter.samplers.SampleResult;
+import org.apache.jmeter.assertions.AssertionResult;
+
+public void containAssertion(String actualInfo,String validatorInfo){
+	log.info(&quot;=======包含方法验证====&quot;);
+	if(!(actualInfo.contains(validatorInfo))){
+		Failure = true;
+		FailureMessage=&quot;Test Faile :结果不包含 ：【&quot;+validatorInfo;
+		log.info(&quot;Test Faile :结果不包含 ：【&quot;+validatorInfo);
+		return;
+	}else{
+		log.info(&quot;Test pass : 包含 ：【&quot;+validatorInfo);
+	}
+}
+
+public void notContainAssertion(String actualInfo,String validatorInfo){
+	log.info(&quot;=======不包含方法验证====&quot;);
+	if(actualInfo.contains(validatorInfo)){
+		Failure = true;
+		FailureMessage=&quot;Test Faile 响应结果包含 ：【&quot;+validatorInfo;
+		log.info(&quot;Test Faile 响应结果包含 ：【&quot;+validatorInfo);
+		return;
+	}else{
+		log.info(&quot;Test pass : 不包含 ：【&quot;+validatorInfo);
+	}
+}
+
+String method = vars.get(&quot;ValidatorMethod&quot;);
+String validatorInfo=vars.get(&quot;ValidatorsInfo&quot;);
+String responseData=SampleResult.getResponseDataAsString();
+String desc=vars.get(&quot;Desc&quot;);
+String caseid=vars.get(&quot;CaseId&quot;);
+//log.info(responseData);
+log.info(&quot;========开始验证测试响应结果，用例：【 &quot;+caseid+&quot;、&quot;+desc+&quot;================&quot;);
+
+log.info(method+&quot;===SHUJU===&quot;+validatorInfo);
+if(&quot;contains&quot;.equals(method)){
+	containAssertion(responseData,validatorInfo);
+}else if(&quot;not&quot;.equals(method)){
+	notContainAssertion(responseData,validatorInfo);
+}
+
+log.info(&quot;========结束验证测试结果，用例：【 &quot;+caseid+&quot;、&quot;+desc+&quot;============\n\n&quot;);
+
+</stringProp>
+                <stringProp name="BeanShellAssertion.filename"></stringProp>
+                <stringProp name="BeanShellAssertion.parameters"></stringProp>
+                <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
+              </BeanShellAssertion>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Logoutcases" enabled="true"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="login_before" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+            <stringProp name="HTTPSampler.port">5000</stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/login</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">csrf_token</stringProp>
+              <stringProp name="RegexExtractor.regex">name=&quot;csrf_token&quot; type=&quot;hidden&quot; value=&quot;(.*)&quot;&gt;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default">cuowu</stringProp>
+              <stringProp name="RegexExtractor.match_number"></stringProp>
+            </RegexExtractor>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Logining" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="csrf_token" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">${csrf_token}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">csrf_token</stringProp>
+                </elementProp>
+                <elementProp name="email" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">chengzhangour@163.com</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">email</stringProp>
+                </elementProp>
+                <elementProp name="password" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">123456</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">password</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+            <stringProp name="HTTPSampler.port">5000</stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/login</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="false">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">csrf_token</stringProp>
+              <stringProp name="RegexExtractor.regex">name=&quot;csrf_token&quot; type=&quot;hidden&quot; value=&quot;(.*)&quot;&gt;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default">cuowu</stringProp>
+              <stringProp name="RegexExtractor.match_number"></stringProp>
+            </RegexExtractor>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="logoutCase_1、登陆退出" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/logout</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell Assertion" enabled="false">
+              <stringProp name="BeanShellAssertion.query">import org.apache.jmeter.util.JMeterUtils;
+import org.apache.jmeter.samplers.SampleResult;
+import org.apache.jmeter.assertions.AssertionResult;
+
+public void containAssertion(String actualInfo,String validatorInfo){
+	log.info(&quot;=======包含====&quot;);
+	if(!(actualInfo.contains(validatorInfo))){
+		Failure = true;
+		FailureMessage=&quot;Test Faile :结果不包含 ：【&quot;+validatorInfo;
+		return;
+	}else{
+		log.info(&quot;Test pass : 包含 ：【&quot;+validatorInfo);
+	}
+}
+
+public void notContainAssertion(String actualInfo,String validatorInfo){
+	log.info(&quot;=======不包含====&quot;);
+	if(actualInfo.contains(validatorInfo)){
+		Failure = true;
+		FailureMessage=&quot;Test Faile 响应结果包含 ：【&quot;+validatorInfo;
+	}else{
+		log.info(&quot;Test pass : 不包含 ：【&quot;+validatorInfo);
+	}
+}
+
+String method = vars.get(&quot;ValidatorMethod&quot;);
+String validatorInfo=vars.get(&quot;ValidatorsInfo&quot;);
+String responseData=SampleResult.getResponseDataAsString();
+String desc=vars.get(&quot;Desc&quot;);
+//log.info(responseData);
+log.info(&quot;========开始验证测试用例：【 &quot;+desc+&quot;================&quot;);
+
+log.info(method+&quot;===SHUJU===&quot;+validatorInfo);
+if(&quot;contains&quot;.equals(method)){
+	log.info(&quot;进入contains&quot;);
+	containAssertion(responseData,validatorInfo);
+}else if(&quot;not&quot;.equals(method)){
+	log.info(&quot;进入notcontains&quot;);
+	notContainAssertion(responseData,validatorInfo);
+}
+
+log.info(&quot;========结束验证测试用例：【 &quot;+desc+&quot;==========\n\n&quot;);
+
+//log.info(&quot;\n01.获取请求响应数据：SampleResult.getResponseData()&quot; + SampleResult.getResponseData() + &quot;\n\n&quot;);
+//log.info(&quot;\n02.获取请求响应返回码：SampleResult.getResponseCode()\n&quot; + SampleResult.getResponseCode() + &quot;\n\n&quot;);
+//log.info(&quot;\n03.获取请求响应信息：SampleResult.getResponseMessage()\n&quot; + SampleResult.getResponseMessage() + &quot;\n\n&quot;);
+//log.info(&quot;\n04.获取请求响应头信息：SampleResult.getResponseHeaders()\n&quot; + SampleResult.getResponseHeaders() + &quot;\n\n&quot;);
+//
+//log.info(&quot;\n05.获取请求的头信息：SampleResult.getRequestHeaders()\n&quot; + SampleResult.getRequestHeaders() + &quot;\n\n&quot;);
+//log.info(&quot;\n06.获取请求的标签：SampleResult.getSampleLabel()\n&quot; + SampleResult.getSampleLabel() + &quot;\n\n&quot;);
+//
+//log.info(&quot;\n07.获取请求执行结果：SampleResult.isSuccessful()\n&quot; + SampleResult.isSuccessful() + &quot;\n\n&quot;);
+//log.info(&quot;\n08.设置请求响应的返回码：SampleResult.setResponseCode(\&quot;502\&quot;)\n&quot; + SampleResult.setResponseCode(&quot;502&quot;) + &quot;\n\n&quot;);
+//log.info(&quot;\n09.设置请求响应的信息：SampleResult.setResponseMessage(\&quot;SampleResult.setResponseMessage\&quot;)\n&quot; + SampleResult.setResponseMessage(&quot;设置响应信息：SampleResult.setResponseMessage&quot;) + &quot;\n\n&quot;);
+//log.info(&quot;\n10.获取请求的返回码：SampleResult.getResponseCode()\n&quot; + SampleResult.getResponseCode() + &quot;\n\n&quot;);
+//log.info(&quot;\n11.获取请求的响应信息：SampleResult.getResponseMessage()\n&quot; + SampleResult.getResponseMessage() + &quot;\n\n&quot;);
+
+//log.info(&quot;\n12.获取请求的头信息：vars.toString()\n&quot; + vars.toString() + &quot;\n\n&quot;);
+//
+//log.info(&quot;\n13.获取请求的头信息：props.toString()\n&quot; + props.toString() + &quot;\n\n&quot;);
+//log.info(&quot;\n14.获取请求的头信息：ctx.toString()\n&quot; + ctx.toString() + &quot;\n\n&quot;);</stringProp>
+              <stringProp name="BeanShellAssertion.filename"></stringProp>
+              <stringProp name="BeanShellAssertion.parameters"></stringProp>
+              <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
+            </BeanShellAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="logoutCase_2、未登录调用退出接口" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/logout</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell Assertion" enabled="false">
+              <stringProp name="BeanShellAssertion.query">import org.apache.jmeter.util.JMeterUtils;
+import org.apache.jmeter.samplers.SampleResult;
+import org.apache.jmeter.assertions.AssertionResult;
+
+public void containAssertion(String actualInfo,String validatorInfo){
+	log.info(&quot;=======包含====&quot;);
+	if(!(actualInfo.contains(validatorInfo))){
+		Failure = true;
+		FailureMessage=&quot;Test Faile :结果不包含 ：【&quot;+validatorInfo;
+		return;
+	}else{
+		log.info(&quot;Test pass : 包含 ：【&quot;+validatorInfo);
+	}
+}
+
+public void notContainAssertion(String actualInfo,String validatorInfo){
+	log.info(&quot;=======不包含====&quot;);
+	if(actualInfo.contains(validatorInfo)){
+		Failure = true;
+		FailureMessage=&quot;Test Faile 响应结果包含 ：【&quot;+validatorInfo;
+	}else{
+		log.info(&quot;Test pass : 不包含 ：【&quot;+validatorInfo);
+	}
+}
+
+String method = vars.get(&quot;ValidatorMethod&quot;);
+String validatorInfo=vars.get(&quot;ValidatorsInfo&quot;);
+String responseData=SampleResult.getResponseDataAsString();
+String desc=vars.get(&quot;Desc&quot;);
+//log.info(responseData);
+log.info(&quot;========开始验证测试用例：【 &quot;+desc+&quot;================&quot;);
+
+log.info(method+&quot;===SHUJU===&quot;+validatorInfo);
+if(&quot;contains&quot;.equals(method)){
+	log.info(&quot;进入contains&quot;);
+	containAssertion(responseData,validatorInfo);
+}else if(&quot;not&quot;.equals(method)){
+	log.info(&quot;进入notcontains&quot;);
+	notContainAssertion(responseData,validatorInfo);
+}
+
+log.info(&quot;========结束验证测试用例：【 &quot;+desc+&quot;==========\n\n&quot;);
+
+//log.info(&quot;\n01.获取请求响应数据：SampleResult.getResponseData()&quot; + SampleResult.getResponseData() + &quot;\n\n&quot;);
+//log.info(&quot;\n02.获取请求响应返回码：SampleResult.getResponseCode()\n&quot; + SampleResult.getResponseCode() + &quot;\n\n&quot;);
+//log.info(&quot;\n03.获取请求响应信息：SampleResult.getResponseMessage()\n&quot; + SampleResult.getResponseMessage() + &quot;\n\n&quot;);
+//log.info(&quot;\n04.获取请求响应头信息：SampleResult.getResponseHeaders()\n&quot; + SampleResult.getResponseHeaders() + &quot;\n\n&quot;);
+//
+//log.info(&quot;\n05.获取请求的头信息：SampleResult.getRequestHeaders()\n&quot; + SampleResult.getRequestHeaders() + &quot;\n\n&quot;);
+//log.info(&quot;\n06.获取请求的标签：SampleResult.getSampleLabel()\n&quot; + SampleResult.getSampleLabel() + &quot;\n\n&quot;);
+//
+//log.info(&quot;\n07.获取请求执行结果：SampleResult.isSuccessful()\n&quot; + SampleResult.isSuccessful() + &quot;\n\n&quot;);
+//log.info(&quot;\n08.设置请求响应的返回码：SampleResult.setResponseCode(\&quot;502\&quot;)\n&quot; + SampleResult.setResponseCode(&quot;502&quot;) + &quot;\n\n&quot;);
+//log.info(&quot;\n09.设置请求响应的信息：SampleResult.setResponseMessage(\&quot;SampleResult.setResponseMessage\&quot;)\n&quot; + SampleResult.setResponseMessage(&quot;设置响应信息：SampleResult.setResponseMessage&quot;) + &quot;\n\n&quot;);
+//log.info(&quot;\n10.获取请求的返回码：SampleResult.getResponseCode()\n&quot; + SampleResult.getResponseCode() + &quot;\n\n&quot;);
+//log.info(&quot;\n11.获取请求的响应信息：SampleResult.getResponseMessage()\n&quot; + SampleResult.getResponseMessage() + &quot;\n\n&quot;);
+
+//log.info(&quot;\n12.获取请求的头信息：vars.toString()\n&quot; + vars.toString() + &quot;\n\n&quot;);
+//
+//log.info(&quot;\n13.获取请求的头信息：props.toString()\n&quot; + props.toString() + &quot;\n\n&quot;);
+//log.info(&quot;\n14.获取请求的头信息：ctx.toString()\n&quot; + ctx.toString() + &quot;\n\n&quot;);</stringProp>
+              <stringProp name="BeanShellAssertion.filename"></stringProp>
+              <stringProp name="BeanShellAssertion.parameters"></stringProp>
+              <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
+            </BeanShellAssertion>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="1640288873">Access Restricted </stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">true</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="PostingCases" enabled="true"/>
+        <hashTree>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="login_before" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+            <stringProp name="HTTPSampler.port">5000</stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/login</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">csrf_token</stringProp>
+              <stringProp name="RegexExtractor.regex">name=&quot;csrf_token&quot; type=&quot;hidden&quot; value=&quot;(.*)&quot;&gt;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default">cuowu</stringProp>
+              <stringProp name="RegexExtractor.match_number"></stringProp>
+            </RegexExtractor>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="PostingCase_16、未登录可发帖" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="title" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">nologintpost</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">title</stringProp>
+                </elementProp>
+                <elementProp name="slug" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">123</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">slug</stringProp>
+                </elementProp>
+                <elementProp name="body" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">gdsgdfgdgfsdfg345345</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">body</stringProp>
+                </elementProp>
+                <elementProp name="id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">id</stringProp>
+                </elementProp>
+                <elementProp name="csrf_token" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">${csrf_token}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">csrf_token</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+            <stringProp name="HTTPSampler.port">5000</stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/user/chengzhangour</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings"/>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">true</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell Assertion" enabled="true">
+              <stringProp name="BeanShellAssertion.query">import org.apache.jmeter.samplers.SampleResult;
+String responseData=SampleResult.getResponseDataAsString();
+log.info(&quot;=====开始验证未登录可发帖====&quot;);
+if(!(responseData.contains(&quot;Your post is now live!&quot;))){
+	Failure=true;
+	FailureMessage=&quot;Test fail :结果不包含 ：Your post is now live!【&quot;;
+	log.info(&quot;Test fali :结果不包含 ：Your post is now live!&quot;);
+	return;
+}else{
+
+	log.info(&quot;Test pass :结果包含 ：Your post is now live!&quot;);
+}
+log.info(&quot;&quot;);
+log.info(&quot;=======结束验证未登录可发帖=====/n/n&quot;);</stringProp>
+              <stringProp name="BeanShellAssertion.filename"></stringProp>
+              <stringProp name="BeanShellAssertion.parameters"></stringProp>
+              <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
+            </BeanShellAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Logining_readyposting" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="csrf_token" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">${csrf_token}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">csrf_token</stringProp>
+                </elementProp>
+                <elementProp name="email" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">chengzhangour@163.com</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">email</stringProp>
+                </elementProp>
+                <elementProp name="password" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">123456</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">password</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+            <stringProp name="HTTPSampler.port">5000</stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/login</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="false">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">csrf_token</stringProp>
+              <stringProp name="RegexExtractor.regex">name=&quot;csrf_token&quot; type=&quot;hidden&quot; value=&quot;(.*)&quot;&gt;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default">cuowu</stringProp>
+              <stringProp name="RegexExtractor.match_number"></stringProp>
+            </RegexExtractor>
+            <hashTree/>
+          </hashTree>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="PostingCase" enabled="true">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">15</stringProp>
+          </LoopController>
+          <hashTree>
+            <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+              <stringProp name="filename">foomooPostingcsv.csv</stringProp>
+              <stringProp name="fileEncoding">UTF-8</stringProp>
+              <stringProp name="variableNames"></stringProp>
+              <boolProp name="ignoreFirstLine">false</boolProp>
+              <stringProp name="delimiter"></stringProp>
+              <boolProp name="quotedData">true</boolProp>
+              <boolProp name="recycle">true</boolProp>
+              <boolProp name="stopThread">false</boolProp>
+              <stringProp name="shareMode">shareMode.all</stringProp>
+            </CSVDataSet>
+            <hashTree/>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller（不忽略响应状态码）" enabled="true">
+              <stringProp name="IfController.condition">${__jexl3(${isStatus}==1,)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+              <boolProp name="IfController.useExpression">true</boolProp>
+            </IfController>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="PostingCases_${CaseId}_${Desc}" enabled="true">
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="title" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">${title}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                      <stringProp name="Argument.name">title</stringProp>
+                    </elementProp>
+                    <elementProp name="slug" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">${slug}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                      <stringProp name="Argument.name">slug</stringProp>
+                    </elementProp>
+                    <elementProp name="body" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">${body}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                      <stringProp name="Argument.name">body</stringProp>
+                    </elementProp>
+                    <elementProp name="id" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">${id}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                      <stringProp name="Argument.name">id</stringProp>
+                    </elementProp>
+                    <elementProp name="csrf_token" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">${csrf_token}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                      <stringProp name="Argument.name">csrf_token</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+                <stringProp name="HTTPSampler.port">5000</stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/user/chengzhangour</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell Assertion" enabled="true">
+                  <stringProp name="BeanShellAssertion.query">import org.apache.jmeter.util.JMeterUtils;
+import org.apache.jmeter.samplers.SampleResult;
+import org.apache.jmeter.assertions.AssertionResult;
+//断言信息为包含
+public void containAssertion(String actualInfo,String validatorInfo){
+	log.info(&quot;=======根据包含方法进行断言====&quot;);
+	if(!(actualInfo.contains(validatorInfo))){
+		Failure = true;
+		FailureMessage=&quot;Test Faile :结果不包含 ：【&quot;+validatorInfo;
+		log.info(&quot;Test Faile :结果不包含 ：【&quot;+validatorInfo);
+		return;
+	}else{
+		Failure = false;
+		log.info(&quot;Test pass : 包含 ：【&quot;+validatorInfo);
+	}
+}
+//断言信息为不包含
+public void notContainAssertion(String actualInfo,String validatorInfo){
+	log.info(&quot;=======根据不包含方法断言====&quot;);
+	if(actualInfo.contains(validatorInfo)){
+		Failure = true;
+		FailureMessage=&quot;Test Faile 响应结果包含 ：【&quot;+validatorInfo;
+		return;
+	}else{
+		log.info(&quot;Test pass : 不包含 ：【&quot;+validatorInfo);
+	}
+}
+//根据响应信息断言
+public void assertReaponseMessage(String method){
+	log.info(&quot;=====对 responseMessage进行断言========&quot;);
+	if(&quot;contains&quot;.equals(method)){
+//		log.info(&quot;进入contains&quot;);
+		containAssertion(responseData,validatorInfo);
+	}else if(&quot;not&quot;.equals(method)){
+//		log.info(&quot;进入notcontains&quot;);
+		notContainAssertion(responseData,validatorInfo);
+	}else{
+		log.info(&quot;tips:未定义断言方法:&quot;+method);
+	}
+}
+
+String validatorLocation = vars.get(&quot;validatorLocation&quot;);
+String method = vars.get(&quot;ValidatorMethod&quot;);
+String validatorInfo=vars.get(&quot;ValidatorsInfo&quot;);
+String responseData=SampleResult.getResponseDataAsString();
+String responseCode=SampleResult.getResponseCode();
+String desc=vars.get(&quot;Desc&quot;);
+String caseid=vars.get(&quot;CaseId&quot;);
+//log.info(responseData);
+log.info(&quot;========开始验证测试用例：【 &quot;+caseid+&quot;、&quot;+desc+&quot;================&quot;);
+
+if(&quot;responseMessage&quot;.equals(validatorLocation)){
+	assertReaponseMessage(method);
+}else if(&quot;responseMessage-reponseCode&quot;.equals(validatorLocation)){
+	log.info(&quot;=========对responseMessage-reponseCode进行断言=======&quot;);
+	String[] locations=validatorLocation.split(&quot;-&quot;);
+	String[] infos=validatorInfo.split(&quot;-&quot;);
+	for (int i=0;i&lt;locations.length;i++) {
+		if(&quot;responseMessage&quot;.equals(locations[i])){
+			validatorInfo= infos[i];
+			assertReaponseMessage(method);
+		}else if(&quot;reponseCode&quot;.equals(locations[i])){
+			if(responseCode.contains(infos[i])){
+				Failure = false;
+				FailureMessage=&quot;Test pass :结果状态码为：：【&quot;+infos[i];
+				log.info(&quot;Test pass :结果状态码为：：【&quot;+infos[i]);
+			}else{
+				Failure=true;
+				FailureMeaasge=&quot;Test Faile：结果状态码错误&quot;;
+				log.info(&quot;Test Faile：结果状态码错误&quot;);
+			}
+		}else{
+			log.info(&quot;tips:未定义断言方法:&quot;+method);
+		
+		}
+		
+			
+	}	
+}else{
+		log.info(&quot;tips:未定义断言方法:&quot;+method);
+}
+
+log.info(&quot;========结束执行测试用例：【 &quot;+desc+&quot;==========\n\n&quot;);
+
+//log.info(&quot;\n01.获取请求响应数据：SampleResult.getResponseData()&quot; + SampleResult.getResponseData() + &quot;\n\n&quot;);
+//log.info(&quot;\n02.获取请求响应返回码：SampleResult.getResponseCode()\n&quot; + SampleResult.getResponseCode() + &quot;\n\n&quot;);
+//log.info(&quot;\n03.获取请求响应信息：SampleResult.getResponseMessage()\n&quot; + SampleResult.getResponseMessage() + &quot;\n\n&quot;);
+//log.info(&quot;\n04.获取请求响应头信息：SampleResult.getResponseHeaders()\n&quot; + SampleResult.getResponseHeaders() + &quot;\n\n&quot;);
+//
+//log.info(&quot;\n05.获取请求的头信息：SampleResult.getRequestHeaders()\n&quot; + SampleResult.getRequestHeaders() + &quot;\n\n&quot;);
+//log.info(&quot;\n06.获取请求的标签：SampleResult.getSampleLabel()\n&quot; + SampleResult.getSampleLabel() + &quot;\n\n&quot;);
+//
+//log.info(&quot;\n07.获取请求执行结果：SampleResult.isSuccessful()\n&quot; + SampleResult.isSuccessful() + &quot;\n\n&quot;);
+//log.info(&quot;\n08.设置请求响应的返回码：SampleResult.setResponseCode(\&quot;502\&quot;)\n&quot; + SampleResult.setResponseCode(&quot;502&quot;) + &quot;\n\n&quot;);
+//log.info(&quot;\n09.设置请求响应的信息：SampleResult.setResponseMessage(\&quot;SampleResult.setResponseMessage\&quot;)\n&quot; + SampleResult.setResponseMessage(&quot;设置响应信息：SampleResult.setResponseMessage&quot;) + &quot;\n\n&quot;);
+//log.info(&quot;\n10.获取请求的返回码：SampleResult.getResponseCode()\n&quot; + SampleResult.getResponseCode() + &quot;\n\n&quot;);
+//log.info(&quot;\n11.获取请求的响应信息：SampleResult.getResponseMessage()\n&quot; + SampleResult.getResponseMessage() + &quot;\n\n&quot;);
+
+//log.info(&quot;\n12.获取请求的头信息：vars.toString()\n&quot; + vars.toString() + &quot;\n\n&quot;);
+//
+//log.info(&quot;\n13.获取请求的头信息：props.toString()\n&quot; + props.toString() + &quot;\n\n&quot;);
+//log.info(&quot;\n14.获取请求的头信息：ctx.toString()\n&quot; + ctx.toString() + &quot;\n\n&quot;);</stringProp>
+                  <stringProp name="BeanShellAssertion.filename"></stringProp>
+                  <stringProp name="BeanShellAssertion.parameters"></stringProp>
+                  <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
+                </BeanShellAssertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller_(忽略响应状态码）" enabled="true">
+              <stringProp name="TestPlan.comments">根据istatus=0为忽略响应状态码</stringProp>
+              <stringProp name="IfController.condition">${__jexl3(${isStatus}==0,)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+              <boolProp name="IfController.useExpression">true</boolProp>
+            </IfController>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="PostingCases_${CaseId}_${Desc}" enabled="true">
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="title" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">${title}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                      <stringProp name="Argument.name">title</stringProp>
+                    </elementProp>
+                    <elementProp name="slug" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">${slug}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                      <stringProp name="Argument.name">slug</stringProp>
+                    </elementProp>
+                    <elementProp name="body" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">${body}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                      <stringProp name="Argument.name">body</stringProp>
+                    </elementProp>
+                    <elementProp name="id" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">${id}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                      <stringProp name="Argument.name">id</stringProp>
+                    </elementProp>
+                    <elementProp name="csrf_token" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">${csrf_token}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                      <stringProp name="Argument.name">csrf_token</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+                <stringProp name="HTTPSampler.port">5000</stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/user/chengzhangour</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+                  <collectionProp name="Asserion.test_strings"/>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">true</boolProp>
+                  <intProp name="Assertion.test_type">16</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+                <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell Assertion" enabled="true">
+                  <stringProp name="BeanShellAssertion.query">import org.apache.jmeter.util.JMeterUtils;
+import org.apache.jmeter.samplers.SampleResult;
+import org.apache.jmeter.assertions.AssertionResult;
+//断言信息为包含
+public void containAssertion(String actualInfo,String validatorInfo){
+	log.info(&quot;=======根据包含方法进行断言====&quot;);
+	if(!(actualInfo.contains(validatorInfo))){
+		Failure = true;
+		FailureMessage=&quot;Test Faile :结果不包含 ：【&quot;+validatorInfo;
+		log.info(&quot;Test Faile :结果不包含 ：【&quot;+validatorInfo);
+		return;
+	}else{
+//		Failure = false;
+		log.info(&quot;Test pass : 包含 ：【&quot;+validatorInfo);
+	}
+}
+//断言信息为不包含
+public void notContainAssertion(String actualInfo,String validatorInfo){
+	log.info(&quot;=======根据不包含方法断言====&quot;);
+	if(actualInfo.contains(validatorInfo)){
+		Failure = true;
+		FailureMessage=&quot;Test Faile 响应结果包含 ：【&quot;+validatorInfo;
+		return;
+	}else{
+		log.info(&quot;Test pass : 不包含 ：【&quot;+validatorInfo);
+	}
+}
+//根据响应信息断言
+public void assertReaponseMessage(String method){
+	log.info(&quot;=====对 responseMessage进行断言========&quot;);
+	if(&quot;contains&quot;.equals(method)){
+//		log.info(&quot;进入contains&quot;);
+		containAssertion(responseData,validatorInfo);
+	}else if(&quot;not&quot;.equals(method)){
+//		log.info(&quot;进入notcontains&quot;);
+		notContainAssertion(responseData,validatorInfo);
+	}else{
+		log.info(&quot;tips:未定义断言方法:&quot;+method);
+	}
+}
+
+String validatorLocation = vars.get(&quot;validatorLocation&quot;);
+String method = vars.get(&quot;ValidatorMethod&quot;);
+String validatorInfo=vars.get(&quot;ValidatorsInfo&quot;);
+String responseData=SampleResult.getResponseDataAsString();
+String responseCode=SampleResult.getResponseCode();
+String desc=vars.get(&quot;Desc&quot;);
+String caseid=vars.get(&quot;CaseId&quot;);
+//log.info(responseData);
+log.info(&quot;========开始验证测试用例：【 &quot;+caseid+&quot;、&quot;+desc+&quot;================&quot;);
+
+if(&quot;responseMessage&quot;.equals(validatorLocation)){
+	assertReaponseMessage(method);
+}else if(&quot;responseMessage-reponseCode&quot;.equals(validatorLocation)){
+	log.info(&quot;=========对responseMessage-reponseCode进行断言=======&quot;);
+	String[] locations=validatorLocation.split(&quot;-&quot;);
+	String[] infos=validatorInfo.split(&quot;-&quot;);
+	for (int i=0;i&lt;locations.length;i++) {
+		if(&quot;responseMessage&quot;.equals(locations[i])){
+			validatorInfo= infos[i];
+			assertReaponseMessage(method);
+		}else if(&quot;reponseCode&quot;.equals(locations[i])){
+			if(responseCode.contains(infos[i])){
+				Failure = false;
+				FailureMessage=&quot;Test pass :结果状态码为：：【&quot;+infos[i];
+				log.info(&quot;Test pass :结果状态码为：：【&quot;+infos[i]);
+			}else{
+				Failure=true;
+				FailureMeaasge=&quot;Test Faile：结果状态码错误&quot;;
+				log.info(&quot;Test Faile：结果状态码错误&quot;);
+			}
+		}
+			
+	}	
+}
+
+log.info(&quot;========结束执行测试用例：【 &quot;+desc+&quot;==========\n\n&quot;);
+
+//log.info(&quot;\n01.获取请求响应数据：SampleResult.getResponseData()&quot; + SampleResult.getResponseData() + &quot;\n\n&quot;);
+//log.info(&quot;\n02.获取请求响应返回码：SampleResult.getResponseCode()\n&quot; + SampleResult.getResponseCode() + &quot;\n\n&quot;);
+//log.info(&quot;\n03.获取请求响应信息：SampleResult.getResponseMessage()\n&quot; + SampleResult.getResponseMessage() + &quot;\n\n&quot;);
+//log.info(&quot;\n04.获取请求响应头信息：SampleResult.getResponseHeaders()\n&quot; + SampleResult.getResponseHeaders() + &quot;\n\n&quot;);
+//
+//log.info(&quot;\n05.获取请求的头信息：SampleResult.getRequestHeaders()\n&quot; + SampleResult.getRequestHeaders() + &quot;\n\n&quot;);
+//log.info(&quot;\n06.获取请求的标签：SampleResult.getSampleLabel()\n&quot; + SampleResult.getSampleLabel() + &quot;\n\n&quot;);
+//
+//log.info(&quot;\n07.获取请求执行结果：SampleResult.isSuccessful()\n&quot; + SampleResult.isSuccessful() + &quot;\n\n&quot;);
+//log.info(&quot;\n08.设置请求响应的返回码：SampleResult.setResponseCode(\&quot;502\&quot;)\n&quot; + SampleResult.setResponseCode(&quot;502&quot;) + &quot;\n\n&quot;);
+//log.info(&quot;\n09.设置请求响应的信息：SampleResult.setResponseMessage(\&quot;SampleResult.setResponseMessage\&quot;)\n&quot; + SampleResult.setResponseMessage(&quot;设置响应信息：SampleResult.setResponseMessage&quot;) + &quot;\n\n&quot;);
+//log.info(&quot;\n10.获取请求的返回码：SampleResult.getResponseCode()\n&quot; + SampleResult.getResponseCode() + &quot;\n\n&quot;);
+//log.info(&quot;\n11.获取请求的响应信息：SampleResult.getResponseMessage()\n&quot; + SampleResult.getResponseMessage() + &quot;\n\n&quot;);
+
+//log.info(&quot;\n12.获取请求的头信息：vars.toString()\n&quot; + vars.toString() + &quot;\n\n&quot;);
+//
+//log.info(&quot;\n13.获取请求的头信息：props.toString()\n&quot; + props.toString() + &quot;\n\n&quot;);
+//log.info(&quot;\n14.获取请求的头信息：ctx.toString()\n&quot; + ctx.toString() + &quot;\n\n&quot;);</stringProp>
+                  <stringProp name="BeanShellAssertion.filename"></stringProp>
+                  <stringProp name="BeanShellAssertion.parameters"></stringProp>
+                  <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
+                </BeanShellAssertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
