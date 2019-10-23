@@ -1,0 +1,2 @@
+导入maven源文件
+用test的插件执行testng.xml
